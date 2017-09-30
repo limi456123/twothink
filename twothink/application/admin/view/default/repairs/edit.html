@@ -1,0 +1,56 @@
+
+{extend name="public/base" /}
+
+{block name="body"}
+    <div class="container-fluid">
+        <form action="{:url()}" method="post"  class="form-horizontal">
+            <input type="hidden" name="id" value="{$info.id}">
+            <div class="form-item">
+                <label class="item-label">您的姓名(必填):<span class="check-tips">（用于显示的文字）</span></label>
+                <div class="controls">
+                    <input type="text" class="text input-large" name="name" value="{$info.name|default=''}" >
+                </div>
+            </div>
+
+            <div class="form-item">
+                <label class="item-label">您的电话(必填):<span class="check-tips">（用于显示的文字）</span></label>
+                <div class="controls">
+                    <input type="text" class="text input-large" name="del"  value="{$info.del|default=''}">
+                </div>
+            </div>
+
+            <div class="form-item">
+                <label class="item-label">您的地址(必填):<span class="check-tips">（用于显示的文字）</span></label>
+                <div class="controls">
+                    <input type="text" class="text input-large" name="addr" value="{$info.addr|default=''}">
+                </div>
+            </div>
+
+            <div class="form-item">
+                <label class="item-label">标题(必填):<span class="check-tips">（用于显示的文字）</span></label>
+                <div class="controls">
+                    <input type="text" class="text input-large" name="title" value="{$info.title|default=''}">
+                </div>
+            </div>
+
+            <div class="form-item">
+                <label class="item-label">内容(详细描述需要报修的内容):<span class="check-tips">（用于显示的文字）</span></label>
+                <div class="controls">
+                    <textarea  type="text" class="text input-large" name="content" style="height: 200px;">
+                     {$info.content|default=''}
+                    </textarea>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <button class="btn btn-primary onlineBtn">确认提交</button>
+            </div>
+        </form>
+    </div>
+
+{/block}
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<!--<script src="../jquery-1.11.2.min.js"></script>-->
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<!--<script src="../bootstrap/js/bootstrap.min.js"></script>-->
